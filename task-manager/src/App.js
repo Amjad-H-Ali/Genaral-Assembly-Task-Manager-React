@@ -30,14 +30,18 @@ class App extends Component {
 	}
 
 	loginAndRegister = async (e) => {
+		
+
 
 		const buttonText = e.target.innerText;
+
+		const buttonTextEnter = e.target.parentNode.nextSibling.childNodes[0].innerText;
 
 		const pwInputVal = e.target.parentNode.parentNode.childNodes[1].childNodes[0].value;
 
 		const userInputVal = e.target.parentNode.parentNode.childNodes[0].childNodes[0].value;
 
-		if(buttonText === "Register"){
+		if(buttonText === "Register" || buttonTextEnter === "Register"){
 
 			const registerJSON = await fetch("http://localhost:9292/user/register",
 			{
