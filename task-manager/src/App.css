@@ -2,8 +2,6 @@
   width: device-width;
 }
 
-
-
 body {
   font-family:'Jua', sans-serif;
   background-color: #F2F3F4;
@@ -15,7 +13,13 @@ body {
 }
 
 
+<<<<<<< HEAD
+#logoutNone {
+  visibility: hidden;
+}
+=======
 
+>>>>>>> 445c0dd40867deca5f8a67eeb066eaa7f9298b20
 
 .Header {
   display: flex;
@@ -25,6 +29,7 @@ body {
   background-color:#7B7D7D;
   box-shadow: -5px 5px 10px #333;
 }
+
 .Logo {
   display: flex;
   justify-content: center;
@@ -37,16 +42,19 @@ body {
   color: rgb(255,255,255);
   border: 3px solid #333;
 }
+
 .HeadingContain {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 100px;
 }
+
 .Heading {
   font-size: 400%;
   color: #fff;
 }
+
 .Welcome {
   color: #fff;
   font-size: 35px;
@@ -114,6 +122,36 @@ body {
     font-size: 10px;
     height: 27px;
   }
+}
+
+@media (max-width: 768px) {
+
+  .Header {
+    height: 150px;
+  }
+
+  .Logo {
+    height: 100px;
+    width: 100px;
+    font-size:35px;
+    margin-left: 65px;
+  }
+  .Heading {
+    font-size: 40px;
+  }
+  .Welcome {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .HeadingContain {
+    margin-right: 0px;
+  }
+
+  .logRegField {
+    margin-top: -50px;
+  }
+
 }
 
 
