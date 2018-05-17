@@ -2,7 +2,7 @@
 Task Manager for GA Homework Assignments
 
 ## API INFO
-See corresponding API repo and files at https://github.com/ga-chicago/project-3-sinatra-react
+See corresponding API repo and files at https://github.com/marietrull/Task_Manager_Project_3_API
 
 ## User Stories
 1) User opens the app - they either register for a new account or login. Users are stored in a model. User Model consists of UserID, Password, Homework_id.
