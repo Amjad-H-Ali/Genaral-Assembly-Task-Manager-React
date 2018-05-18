@@ -58,7 +58,7 @@ class App extends Component {
 
 		if(buttonText === "Register"){
 
-			const registerJSON = await fetch("https://enigmatic-tundra-76944.herokuapp.com/user/register",
+			const registerJSON = await fetch("https://limitless-lowlands-56171.herokuapp.com/user/register",
 			{
 				method: "POST",
 				credentials: 'include',
@@ -73,7 +73,7 @@ class App extends Component {
 
 		else {
 
-			const loginJSON = await fetch("https://enigmatic-tundra-76944.herokuapp.com/user/login",
+			const loginJSON = await fetch("https://limitless-lowlands-56171.herokuapp.com/user/login",
 			{
 				method: "POST",
 				credentials: 'include',
@@ -98,7 +98,7 @@ class App extends Component {
 
 	logout = async (e) => {
 
-		const logout = await fetch("https://enigmatic-tundra-76944.herokuapp.com/logout",
+		const logout = await fetch("https://limitless-lowlands-56171.herokuapp.com/logout",
 		
 		{
 			method: 'POST',
