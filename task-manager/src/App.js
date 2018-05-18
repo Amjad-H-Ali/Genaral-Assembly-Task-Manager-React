@@ -150,6 +150,6 @@ class App extends Component {
     	);
   	}
 }
-// <button id={logoutClass} onClick={this.logout}> Logout </button>
+
 
 export default App;

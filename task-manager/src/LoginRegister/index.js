@@ -25,7 +25,7 @@ const LoginRegister = ({loginAndRegisterBtn, registering, changeRegistering, hit
 
 				<div><input className="InpPass" type="password" onKeyPress={hitEnter} placeholder={registering ? "Create Password" : "Password"}/></div>
 
-				<div className="LogBtnDiv" ><button className="LogBtn" onKeyPress={hitEnter} onClick={loginAndRegisterBtn}> {registering ? "Register" : "Login"} </button></div>
+				<div className="LogBtnDiv" ><button className="LogBtn"  onClick={loginAndRegisterBtn}> {registering ? "Register" : "Login"} </button></div>
 			</div>
 
 
