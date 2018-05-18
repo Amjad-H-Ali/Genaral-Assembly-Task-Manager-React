@@ -23,31 +23,46 @@ class App extends Component {
 
 	hitEnter = (e) => {
 
-		if (e.charCode === 13){
-			this.loginAndRegister(e);
+		const key = e.charCode;
+
+		if (key === 13){
+			const buttonText = e.target.parentNode.nextSibling.childNodes[0].innerText;
+			console.log(buttonText, 'buttonText');
+
+			const pwInputVal = e.target.value;
+			console.log(pwInputVal, "pwInputVal");
+
+			const userInputVal = e.target.parentNode.previousSibling.childNodes[0].value;
+			console.log(userInputVal, "userInputVal");
+
+			this.logInRegister(userInputVal, pwInputVal, buttonText);
 		} 
 		
 	}
 
-	loginAndRegister = async (e) => {
+	loginAndRegisterBtn = (e) => {
 		
-
-
+	
 		const buttonText = e.target.innerText;
-
-		const buttonTextEnter = e.target.parentNode.nextSibling.childNodes[0].innerText;
 
 		const pwInputVal = e.target.parentNode.parentNode.childNodes[1].childNodes[0].value;
 
 		const userInputVal = e.target.parentNode.parentNode.childNodes[0].childNodes[0].value;
+	
+		this.logInRegister(userInputVal, pwInputVal, buttonText);
 
-		if(buttonText === "Register" || buttonTextEnter === "Register"){
+	}
+
+
+	logInRegister = async (username, password, buttonText)=>{
+
+		if(buttonText === "Register"){
 
 			const registerJSON = await fetch("http://localhost:9292/user/register",
 			{
 				method: "POST",
 				credentials: 'include',
-				body:JSON.stringify({username: userInputVal, password: pwInputVal})
+				body:JSON.stringify({username: username, password: password})
 			})
 
 			const registerResponse = await registerJSON.json();
@@ -62,7 +77,7 @@ class App extends Component {
 			{
 				method: "POST",
 				credentials: 'include',
-				body:JSON.stringify({username: userInputVal, password: pwInputVal})
+				body:JSON.stringify({username: username, password: password})
 			})
 
 			const loginResponse = await loginJSON.json();
@@ -70,8 +85,8 @@ class App extends Component {
 			loginResponse.success ? this.setState({logged:true, username:loginResponse.username}) : this.setState({message: loginResponse.message})
 
 		}
-
 	}
+
 
 	changeRegistering = (e) => {
 
@@ -128,7 +143,7 @@ class App extends Component {
 
     	     
 
-    	  	{this.state.logged ? <HomeworkContainer logout={this.logout}/> : <LoginRegister loginAndRegister={this.loginAndRegister} registering={this.state.registering} changeRegistering={this.changeRegistering} hitEnter={this.hitEnter}/>}  
+    	  	{this.state.logged ? <HomeworkContainer logout={this.logout}/> : <LoginRegister loginAndRegisterBtn={this.loginAndRegisterBtn} registering={this.state.registering} changeRegistering={this.changeRegistering} hitEnter={this.hitEnter}/>}  
 
      	   
      	 </div>
