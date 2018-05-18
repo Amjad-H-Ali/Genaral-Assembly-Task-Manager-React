@@ -33,7 +33,7 @@ class OutcomesContainer extends Component {
 	}
 
 	getItems = async () => {
-	    const outcomesJson = await fetch('http://localhost:9292/outcome', {
+	    const outcomesJson = await fetch('https://enigmatic-tundra-76944.herokuapp.com/outcome', {
 	      credentials: 'include'
 	    })
 	    const outcomes = await outcomesJson.json();
@@ -50,7 +50,7 @@ class OutcomesContainer extends Component {
 
   	addAssignment = async (name, link, notes) => {
 
-		const outcomes = await fetch('http://localhost:9292/outcome', {
+		const outcomes = await fetch('https://enigmatic-tundra-76944.herokuapp.com/outcome', {
 			method: 'POST',
 			body: JSON.stringify({
 				name: name,
@@ -81,7 +81,7 @@ class OutcomesContainer extends Component {
 
 		const id = this.state.editedAssignment.id
 
-		const removeItem = await fetch('http://localhost:9292/outcome/' + id, {
+		const removeItem = await fetch('https://enigmatic-tundra-76944.herokuapp.com/outcome/' + id, {
 			method: 'DELETE',
 			credentials: 'include'
 		});
@@ -116,7 +116,7 @@ class OutcomesContainer extends Component {
 		const editId = this.state.editedAssignment.id
 
 														// Added syntactic sugar
-		const outcome = await fetch(`http://localhost:9292/outcome/${editId}`, {
+		const outcome = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/outcome/${editId}`, {
 			method: 'PUT',
 			body: JSON.stringify({
 				name: name,
@@ -152,7 +152,7 @@ class OutcomesContainer extends Component {
 
 		const outcomeId = e.target.parentNode.id;
 
-		const outcomeJSON = await fetch(`http://localhost:9292/outcome/${outcomeId}`, {
+		const outcomeJSON = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/outcome/${outcomeId}`, {
 			credentials:'include'
 		});
 
@@ -176,7 +176,7 @@ class OutcomesContainer extends Component {
 	check = async (e) =>{
 
 
-		const checkJSON = await fetch(`http://localhost:9292/outcome/${this.state.outcomeShowing.id}/check`, {
+		const checkJSON = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/outcome/${this.state.outcomeShowing.id}/check`, {
 			method: 'PUT',
 			credentials: 'include'
 		});

@@ -40,7 +40,7 @@ class HomeworkContainer extends Component {
 
 	getItems = async () => {
 
-	    const assignmentsJson = await fetch('http://localhost:9292/assignment', {
+	    const assignmentsJson = await fetch('https://enigmatic-tundra-76944.herokuapp.com/assignment', {
 	      credentials: 'include'
 	    })
 
@@ -59,7 +59,7 @@ class HomeworkContainer extends Component {
 
 	addAssignment = async (name, link, notes) => {
 
-		const assignments = await fetch('http://localhost:9292/assignment', {
+		const assignments = await fetch('https://enigmatic-tundra-76944.herokuapp.com/assignment', {
 			method: 'POST',
 			body: JSON.stringify({
 				name: name,
@@ -91,7 +91,7 @@ class HomeworkContainer extends Component {
 		
 		const id = this.state.editedAssignment.id
 
-		const removeItem = await fetch('http://localhost:9292/assignment/' + id, {
+		const removeItem = await fetch('https://enigmatic-tundra-76944.herokuapp.com/assignment/' + id, {
 			method: 'DELETE',
 			credentials: 'include'
 		});
@@ -128,7 +128,7 @@ class HomeworkContainer extends Component {
 
 		const editId = this.state.editedAssignment.id
 
-		const assignment = await fetch(`http://localhost:9292/assignment/${editId}`, {
+		const assignment = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/assignment/${editId}`, {
 			method: 'PUT',
 			body: JSON.stringify({
 				name: name,
@@ -163,7 +163,7 @@ class HomeworkContainer extends Component {
 
 		const hwId = e.target.parentNode.id;
 
-		const hwJSON = await fetch(`http://localhost:9292/assignment/${hwId}`, {
+		const hwJSON = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/assignment/${hwId}`, {
 			credentials:'include'
 		});
 
@@ -196,7 +196,7 @@ class HomeworkContainer extends Component {
 
 	check = async (e) => {
 
-		const checkJSON = await fetch(`http://localhost:9292/assignment/${this.state.hwShowing.id}/check`, {
+		const checkJSON = await fetch(`https://enigmatic-tundra-76944.herokuapp.com/assignment/${this.state.hwShowing.id}/check`, {
 			method: 'PUT',
 			credentials: 'include'
 		});
