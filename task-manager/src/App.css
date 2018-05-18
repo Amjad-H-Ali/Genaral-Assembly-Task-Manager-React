@@ -55,10 +55,9 @@ body {
 
 #logoutButton {
   border: 3px solid #333;
-  font-size: 15px;
+  font-size: 18px;
   height: 30px;
-  width: 70px;
-  float: right;
+  width: 90px;
 }
 
 
@@ -70,14 +69,59 @@ body {
 }
 
 .logoutContainer {
+  width:300px;
   height: 20%;
   order:0;
   flex-direction: column;
   align-self: flex-end;
 
+
+}
+@media (min-width: 1024px) and (max-width: 1365px){
+  .Header {
+    height: 200px;
+  }
+  .Logo {
+    height:140px;
+    width: 140px;
+    font-size: 50px;
+    margin-left: 55px;
+  }
+  .Heading {
+    font-size: 50px;
+  }
 }
 
 
+@media (min-width: 415px) and (max-width: 1024px) {
+
+  .Header {
+    height: 150px;
+  }
+
+  .Logo {
+    height: 100px;
+    width: 100px;
+    font-size:35px;
+    margin-left: 45px;
+  }
+  .Heading {
+    font-size: 40px;
+  }
+  .Welcome {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .HeadingContain {
+    margin-right: 0px;
+  }
+
+  .logRegField {
+    margin-top: -50px;
+  }
+
+}
 
 @media (max-width: 415px) {
 
@@ -97,7 +141,6 @@ body {
     margin-top: 10px;
   }
   #logoutButton {
-    border:3px solid #333;
     font-size: 12px;
     padding-left: 6px;
     height: 15%;
@@ -108,44 +151,16 @@ body {
   }
   .logoutContainer {
     margin-top: -15px;
-    width: 100%;
+    width: 130px;
   }
 
   #logoutButton {
-    font-size: 10px;
+    font-size: 13px;
     height: 27px;
+    width:70px;
   }
 }
 
-@media (max-width: 768px) {
-
-  .Header {
-    height: 150px;
-  }
-
-  .Logo {
-    height: 100px;
-    width: 100px;
-    font-size:35px;
-    margin-left: 65px;
-  }
-  .Heading {
-    font-size: 40px;
-  }
-  .Welcome {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-
-  .HeadingContain {
-    margin-right: 0px;
-  }
-
-  .logRegField {
-    margin-top: -50px;
-  }
-
-}
 
 
 

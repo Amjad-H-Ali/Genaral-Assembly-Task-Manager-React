@@ -128,3 +128,18 @@ input[type=checkbox]:checked:disabled + label:before {
   border-color: #bfb;
 }
 
+@media (max-width: 415px){
+  .modal-content {
+    width: 70%;
+  }
+  .showHWText {
+    width: 100%;
+
+  }
+
+  #nameText {
+    font-size: 30px;
+  }
+  
+}
+
