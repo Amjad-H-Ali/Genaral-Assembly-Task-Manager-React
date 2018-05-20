@@ -19,7 +19,7 @@ Task Manager for General Assembly Student Assignments.
 ## Technologies Used:
 
   * ReactJS and CSS (Flex Box and Media Queries).
-  * Task Manager API that we've built (https://github.com/Amjad-H-Ali/General-Assembly-Task-Manager-API)
+  * Task Manager API that we built (https://github.com/Amjad-H-Ali/General-Assembly-Task-Manager-API)
 
 ## API INFO
 
