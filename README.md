@@ -6,7 +6,7 @@ Task Manager for General Assembly Student Assignments.
   
   * Register to join the site. If already a user, then Log in.
   * Click the "New Assignment" button to create assignments.
-  * A form will appear where you can add the name, link, and notes for the assignment.
+  * A form will appear where you can add the name, Git Hub link, and notes for the assignment.
   * Once created, the assignment name will appear on the page.
   * You can click on the assignment name to view its details.
   * From the details page, you can click the check box to note that you've completed the assignment.
