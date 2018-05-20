@@ -13,7 +13,7 @@ Task Manager for General Assembly Student Assignments.
   * Also from the details page, you can click the link that will redirect you to the assignment's Git Hub page.
   * You can Edit the assignment details by clicking the "Edit" button.
   * Or you can Delete the entire assignment.
-  * You can toggle between different assignment categories by clicking on the tabs above.
+  * You can toggle between different assignment categories by clicking the tabs above.
   * Logout by clicking the button on top of the page.
 
 ## Technologies Used:
