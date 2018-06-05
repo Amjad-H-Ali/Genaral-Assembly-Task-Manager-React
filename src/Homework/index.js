@@ -5,7 +5,7 @@ const Homework = ({assignments, openEdit, showHWModal}) => {
 
 	const homeworkList = assignments.map((assignment,i) => {
 
-		return <li className='assignmentList' id={assignment.id} key={i}><span onClick={showHWModal}>{assignment.name}</span> 
+		return <li className='assignmentList' id={assignment.id} key={i}><span className='anAssignment' onClick={showHWModal}>{assignment.name}</span> 
 					<button className='editButton' onClick={openEdit}>EDIT</button>
 
 				</li>	

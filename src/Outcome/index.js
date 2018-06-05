@@ -5,7 +5,7 @@ const Outcome = ({outcomes, openEdit,showOutcomesModal }) => {
 	const outcomesList = outcomes.map((outcome,i) => {
 
 		return <li className='assignmentList' id={outcome.id} key={i}>
-					<span onClick={showOutcomesModal}>{outcome.name}</span>
+					<span className='anAssignment' onClick={showOutcomesModal}>{outcome.name}</span>
 					
 					<button className='editButton' onClick={openEdit}>EDIT</button>
 
